@@ -1,6 +1,6 @@
 /* 
 * AgroTech - Estilos personalizados
-* Projeto Acadêmico - PBL Engenharia de Software
+* Projeto AcadÃŠmico - PBL Engenharia de Software
 */
 
 /* Estilos Gerais */
@@ -149,7 +149,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 150px; /* Altura mínima fixa para todos os boxes */
+    min-height: 150px; /* Altura mÃ­nima fixa para todos os boxes */
     margin: 0;
     padding: 1.5rem !important;
     box-sizing: border-box;
@@ -175,7 +175,7 @@ p {
     color: white !important;
 }
 
-/* Blocos de resultados em histórias de caso */
+/* Blocos de resultados em histÃģrias de caso */
 .p-3.rounded.bg-success.bg-opacity-10 {
     height: 100%;
     display: flex;
@@ -314,7 +314,7 @@ footer a:hover {
         margin-top: 1rem;
     }
     
-    /* Ajustes para result-box em telas médias */
+    /* Ajustes para result-box em telas mÃĐdias */
     .result-box {
         min-height: 140px;
     }
@@ -385,7 +385,7 @@ footer a:hover {
     color: #ffffff !important;
 }
 
-/* Responsividade para os cartões de resultados */
+/* Responsividade para os cartÃĩes de resultados */
 @media (max-width: 767.98px) {
     .card.bg-success .card-body {
         min-height: 100px;
@@ -435,7 +435,7 @@ footer a:hover {
     border-color: #f0f0f0;
 }
 
-/* Seções específicas com classes bg-opacity */
+/* SeÃ§Ãĩes especÃ­ficas com classes bg-opacity */
 .bg-success.bg-opacity-10 {
     background-color: rgba(46, 139, 87, 0.1) !important;
     color: #333333 !important;
