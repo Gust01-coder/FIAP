@@ -1,22 +1,18 @@
-/**
- * AgroTech - JavaScript principal
- * Projeto Acadêmico - PBL Engenharia de Software
- */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Ativar tooltips
+
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map(function(tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 
-    // Ativar popovers
+
     const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
     popoverTriggerList.map(function(popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl);
     });
 
-    // Efeito de scroll na navbar
+
     const navbar = document.querySelector('.navbar');
     
     if (navbar) {
@@ -31,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Efeito de scroll suave para links de âncora
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -51,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Animação de contador para números
+
     const animateCounters = () => {
         const counters = document.querySelectorAll('.display-4, .h4.fw-bold.text-success');
         
@@ -75,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 };
                 
-                // Iniciar animação apenas quando o elemento estiver visível
+
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -90,12 +86,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // Iniciar animação de contadores se existirem na página
+
     if (document.querySelector('.display-4, .h4.fw-bold.text-success')) {
         animateCounters();
     }
 
-    // Galeria de imagens modal (para casos de sucesso)
+
     const caseImages = document.querySelectorAll('.case-image');
     
     if (caseImages.length > 0) {
@@ -112,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Filtro de casos de sucesso (se existir na página)
+
     const successFilter = document.getElementById('successFilter');
     
     if (successFilter) {
@@ -130,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Newsletter subscription
+
     const newsletterForm = document.querySelector('footer .input-group');
     
     if (newsletterForm) {
@@ -141,29 +137,27 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = emailInput.value.trim();
             
             if (email && validateEmail(email)) {
-                // Simular envio do formulário
                 emailInput.value = '';
                 
-                // Exibir mensagem de sucesso
+
                 const successAlert = document.createElement('div');
                 successAlert.className = 'alert alert-success mt-2';
                 successAlert.innerText = 'Obrigado pela inscrição!';
                 
                 newsletterForm.parentNode.appendChild(successAlert);
                 
-                // Remover a mensagem após 3 segundos
                 setTimeout(() => {
                     successAlert.remove();
                 }, 3000);
             } else {
-                // Exibir mensagem de erro
+
                 const errorAlert = document.createElement('div');
                 errorAlert.className = 'alert alert-danger mt-2';
                 errorAlert.innerText = 'Por favor, insira um e-mail válido.';
                 
                 newsletterForm.parentNode.appendChild(errorAlert);
                 
-                // Remover a mensagem após 3 segundos
+
                 setTimeout(() => {
                     errorAlert.remove();
                 }, 3000);
@@ -172,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Validação de email
+
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
