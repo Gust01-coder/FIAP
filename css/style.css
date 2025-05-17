@@ -1,9 +1,4 @@
-/* 
-* AgroTech - Estilos personalizados
-* Projeto AcadÃŠmico - PBL Engenharia de Software
-*/
 
-/* Estilos Gerais */
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
@@ -59,7 +54,7 @@ p {
     color: #ffffff !important;
 }
 
-/* Navbar */
+
 .navbar {
     padding: 1rem 0;
     transition: all 0.3s ease;
@@ -85,7 +80,7 @@ p {
     color: #2E8B57;
 }
 
-/* Hero Section */
+
 .hero-section {
     padding: 8rem 0 5rem;
 }
@@ -100,7 +95,7 @@ p {
     transform: translateY(-10px);
 }
 
-/* Feature Icons */
+
 .feature-icon {
     width: 80px;
     height: 80px;
@@ -111,7 +106,7 @@ p {
     margin: 0 auto;
 }
 
-/* Card Hover Effect */
+
 .card {
     transition: all 0.3s ease;
 }
@@ -121,7 +116,7 @@ p {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Page Header */
+
 .page-header {
     padding: 8rem 0 5rem;
 }
@@ -130,7 +125,7 @@ p {
     margin-top: 56px;
 }
 
-/* Solution Badge */
+
 .solution-badge {
     display: inline-block;
     background-color: rgba(46, 139, 87, 0.1);
@@ -142,14 +137,14 @@ p {
     justify-content: center;
 }
 
-/* Results Box - Nova classe adicionada para corrigir o alinhamento */
+
 .result-box {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 150px; /* Altura mÃ­nima fixa para todos os boxes */
+    min-height: 150px;
     margin: 0;
     padding: 1.5rem !important;
     box-sizing: border-box;
@@ -175,7 +170,7 @@ p {
     color: white !important;
 }
 
-/* Blocos de resultados em histÃģrias de caso */
+
 .p-3.rounded.bg-success.bg-opacity-10 {
     height: 100%;
     display: flex;
@@ -197,7 +192,7 @@ p {
     width: 100%;
 }
 
-/* Testimonial Cards */
+
 .testimonial-card {
     border-radius: 10px;
     overflow: hidden;
@@ -208,7 +203,7 @@ p {
     transform: translateY(-10px);
 }
 
-/* Feature List */
+
 .feature-list {
     list-style: none;
     padding-left: 0;
@@ -220,7 +215,7 @@ p {
     align-items: start;
 }
 
-/* Team Cards */
+
 .team-card img {
     transition: all 0.3s ease;
 }
@@ -237,7 +232,7 @@ p {
     color: #2E8B57 !important;
 }
 
-/* Contact Icons */
+
 .contact-icon {
     width: 50px;
     height: 50px;
@@ -256,12 +251,12 @@ p {
     justify-content: center;
 }
 
-/* Map Container */
+
 .map-container {
     overflow: hidden;
 }
 
-/* Partner Logos */
+
 .partner-logo {
     max-height: 80px;
     opacity: 0.7;
@@ -273,17 +268,17 @@ p {
     transform: scale(1.05);
 }
 
-/* Object Cover */
+
 .object-cover {
     object-fit: cover;
 }
 
-/* Blockquote */
+
 blockquote {
     font-style: italic;
 }
 
-/* Footer */
+
 footer {
     background-color: #222;
     color: #fff;
@@ -299,7 +294,7 @@ footer a:hover {
     color: #ffffff;
 }
 
-/* Media Queries */
+
 @media (max-width: 991.98px) {
     .navbar {
         padding: 0.5rem 0;
@@ -314,7 +309,6 @@ footer a:hover {
         margin-top: 1rem;
     }
     
-    /* Ajustes para result-box em telas mÃĐdias */
     .result-box {
         min-height: 140px;
     }
@@ -345,7 +339,7 @@ footer a:hover {
         font-size: 1.8rem;
     }
     
-    /* Ajustes para result-box em telas pequenas */
+
     .result-box {
         min-height: auto;
         margin-bottom: 1rem;
@@ -356,7 +350,7 @@ footer a:hover {
     }
 }
 
-/* Resultados Cards */
+
 .card.bg-success {
     background-color: #2E8B57 !important;
     border-radius: 0 !important;
@@ -385,7 +379,7 @@ footer a:hover {
     color: #ffffff !important;
 }
 
-/* Responsividade para os cartÃĩes de resultados */
+
 @media (max-width: 767.98px) {
     .card.bg-success .card-body {
         min-height: 100px;
@@ -397,7 +391,7 @@ footer a:hover {
     }
 }
 
-/* CTA Section */
+
 .py-5.bg-success.text-white {
     background-color: #2E8B57 !important;
     color: #ffffff !important;
@@ -435,7 +429,7 @@ footer a:hover {
     border-color: #f0f0f0;
 }
 
-/* SeÃ§Ãĩes especÃ­ficas com classes bg-opacity */
+
 .bg-success.bg-opacity-10 {
     background-color: rgba(46, 139, 87, 0.1) !important;
     color: #333333 !important;
@@ -454,7 +448,7 @@ footer a:hover {
     color: inherit;
 }
 
-/* Ajuste para Navbar em fundo branco */
+
 .navbar.navbar-light .nav-link {
     color: #212529;
 }
@@ -464,7 +458,7 @@ footer a:hover {
     color: #2E8B57 !important;
 }
 
-/* Ajuste de contraste */
+
 .bg-dark {
     background-color: #212529 !important;
 }
