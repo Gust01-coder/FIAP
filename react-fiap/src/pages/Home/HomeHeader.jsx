@@ -20,26 +20,26 @@ const HomeHeader = () => {
                 Fale Conosco
               </a>
             </div>
-            <div class="mt-4 d-flex align-items-center">
-              <div class="me-4">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+            <div className="mt-4 d-flex align-items-center">
+              <div className="me-4">
+                <div className="d-flex align-items-center">
+                  <i className="bi bi-check-circle-fill text-success me-2"></i>
                   <span>Redução de desperdícios</span>
                 </div>
               </div>
               <div>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <div className="d-flex align-items-center">
+                  <i className="bi bi-check-circle-fill text-success me-2"></i>
                   <span>Aumento de produtividade</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div className="col-lg-6">
             <img
               src="https://i.pinimg.com/736x/59/c4/7f/59c47f70751c16774597375774bb5c7e.jpg"
               alt="Agricultura tecnológica"
-              class="img-fluid rounded hero-image"
+              className="img-fluid rounded hero-image"
             />
           </div>
         </div>
