@@ -1,4 +1,3 @@
-import NavBarContainer from "../../components/NavBar/NavBarContainer";
 import LogisticaoSec from "./sections/Logisticao";
 import MapeamentoSec from "./sections/Mapeamento";
 import SolucoesHeader from "./SolucoesHeader";
@@ -18,7 +17,7 @@ const SolucoesPage = () => {
       <PerguntasFrequentesSec />
       <EntreEmContato />
     </>
-  )
+  );
 };
 
 export default SolucoesPage;
