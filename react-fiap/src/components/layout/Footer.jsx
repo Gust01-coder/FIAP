@@ -12,16 +12,16 @@ const Footer = () => {
             </p>
             <div className="d-flex gap-3 mt-4">
               <a href="#" className="text-white">
-                <i class="bi bi-facebook fs-5"></i>
+                <i className="bi bi-facebook fs-5"></i>
               </a>
               <a href="#" className="text-white">
-                <i class="bi bi-instagram fs-5"></i>
+                <i className="bi bi-instagram fs-5"></i>
               </a>
               <a href="#" className="text-white">
-                <i class="bi bi-twitter fs-5"></i>
+                <i className="bi bi-twitter fs-5"></i>
               </a>
               <a href="#" className="text-white">
-                <i class="bi bi-linkedin fs-5"></i>
+                <i className="bi bi-linkedin fs-5"></i>
               </a>
             </div>
           </div>
@@ -29,27 +29,42 @@ const Footer = () => {
             <h5 className="fw-bold mb-3">Links</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="index.html" class="text-white text-decoration-none">
+                <a
+                  href="index.html"
+                  className="text-white text-decoration-none"
+                >
                   Home
                 </a>
               </li>
               <li className="mb-2">
-                <a href="solucoes.html" class="text-white text-decoration-none">
+                <a
+                  href="solucoes.html"
+                  className="text-white text-decoration-none"
+                >
                   Soluções
                 </a>
               </li>
               <li className="mb-2">
-                <a href="sobre.html" class="text-white text-decoration-none">
+                <a
+                  href="sobre.html"
+                  className="text-white text-decoration-none"
+                >
                   Sobre Nós
                 </a>
               </li>
               <li className="mb-2">
-                <a href="casos.html" class="text-white text-decoration-none">
+                <a
+                  href="casos.html"
+                  className="text-white text-decoration-none"
+                >
                   Casos de Sucesso
                 </a>
               </li>
               <li className="mb-2">
-                <a href="contato.html" class="text-white text-decoration-none">
+                <a
+                  href="contato.html"
+                  className="text-white text-decoration-none"
+                >
                   Fale Conosco
                 </a>
               </li>
@@ -59,13 +74,14 @@ const Footer = () => {
             <h5 className="fw-bold mb-3">Contato</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <i class="bi bi-geo-alt me-2"></i> Belo Horizonte, MG, Brasil
+                <i className="bi bi-geo-alt me-2"></i> Belo Horizonte, MG,
+                Brasil
               </li>
               <li className="mb-2">
-                <i class="bi bi-telephone me-2"></i> (31) 9999-9999
+                <i className="bi bi-telephone me-2"></i> (31) 9999-9999
               </li>
               <li className="mb-2">
-                <i class="bi bi-envelope me-2"></i> contato@agrotech.com.br
+                <i className="bi bi-envelope me-2"></i> contato@agrotech.com.br
               </li>
             </ul>
           </div>
