@@ -1,14 +1,25 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/HomePage";
 import Solucoes from "./pages/Solucoes/SolucoesPage";
+import NavBarContainer from "../../components/NavBar/NavBarContainer";
+import Footer from "../../components/layout/Footer";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/solucoes" element={<Solucoes />} />
-      </Routes>
+      <NavBarContainer />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/solucoes" element={<Solucoes />} />
+          {/* Rotas comentadas até criar os componentes
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/casos" element={<Casos />} />
+            <Route path="/contato" element={<Contato />} />
+            */}
+        </Routes>
+      </main>
+      <Footer />
     </BrowserRouter>
   );
 }
