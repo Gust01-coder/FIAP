@@ -4,7 +4,7 @@ import SolucoesHeader from "./SolucoesHeader";
 import AutomocaoSec from "./sections/Automacao";
 import NossaPlataformaSec from "./sections/NossaPlataforma";
 import PerguntasFrequentesSec from "./sections/PerguntasFrequentes";
-import EntreEmContato from "./sections/EntreEmContato";
+import CTASection from "../../components/CTASection";
 
 const SolucoesPage = () => {
   return (
@@ -15,7 +15,14 @@ const SolucoesPage = () => {
       <AutomocaoSec />
       <NossaPlataformaSec />
       <PerguntasFrequentesSec />
-      <EntreEmContato />
+      <CTASection
+        title="Pronto para transformar sua produção agrícola?"
+        subtitle="Junte-se a centenas de produtores que já otimizaram sua produção com nossas soluções."
+      >
+        <a href="contato.html" class="btn btn-light btn-lg px-4">
+          Entre em contato agora
+        </a>
+      </CTASection>
     </>
   );
 };
