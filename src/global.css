@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@utility h-admin-page {
+  height: calc(100vh - 64px);
+}
