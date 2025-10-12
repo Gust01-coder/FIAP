@@ -5,7 +5,7 @@ export const AccordionContato = () => {
     {
       header: "Quanto tempo leva para receber uma resposta após o contato?",
       bodyText:
-        "Respondemos a todas as mensagens em até 24 horas úteis. Para assuntos urgentes recomendamos entrar em contato por telefone."
+        "Respondemos a todas as mensagens em até 24 horas úteis. Para assuntos urgentes recomendamos entrar em contato por telefone.",
     },
     {
       header: "Vocês atendem em todo o Brasil?",
