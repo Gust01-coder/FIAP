@@ -31,8 +31,19 @@ const Login = () => {
 
     setIsSubmitting(true);
 
-    const user = form[0].value;
-    const password = form[1].value;
+    // Buscar os campos do formulário
+    const userInput = form.querySelector('input[name="user"]') || form.querySelector('input[type="text"]');
+    const passwordInput = form.querySelector('input[type="password"]');
+    
+    if (!userInput || !passwordInput) {
+      console.error('Campos do formulário não encontrados');
+      setIsSubmitting(false);
+      setInvalidCredentials(true);
+      return;
+    }
+    
+    const user = userInput.value.trim();
+    const password = passwordInput.value.trim();
 
     if (await login({ user, password })) {
       setInvalidCredentials(false);
@@ -46,73 +57,121 @@ const Login = () => {
   };
 
   return (
-    <Container
-      className="w-screen h-screen flex items-center position-relative"
-      fluid
-      style={{
-        minHeight: '100vh',
-        position: 'relative',
-      }}
-    >
-      <div
+    <div className="login-page-wrapper">
+      <Container
+        fluid
+        className="d-flex align-items-center justify-content-center position-relative"
         style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundImage: 'url(/img/Fundo_login.jpg)',
+          minHeight: '100vh',
+          backgroundImage: 'url(/img/background_login.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.85,
-          zIndex: 0,
+          padding: '2rem',
+          position: 'relative',
+          overflow: 'hidden',
         }}
-      />
-      <Card className="max-w-xl w-full mx-auto position-relative" style={{ zIndex: 1 }}>
-        <Card.Body>
-          <Card.Title className="text-center">
-            <span className="logo-text">
-              Agro<span className="text-success">Tech</span>
-            </span>
-            Admin
-          </Card.Title>
-          <Card.Subtitle className="mb-5 text-gray-400 text-center">
-            Faça login para continuar
-          </Card.Subtitle>
+      >
 
-          {invalidCredentials && (
-            <Alert
-              variant="warning"
-              dismissible
-              onClose={() => setInvalidCredentials(false)}
-              className="mb-3"
-            >
-              Credencias inválidas.
-            </Alert>
-          )}
+        <Card 
+          className="login-card-custom shadow-lg"
+          style={{
+            maxWidth: '900px',
+            width: '100%',
+            borderRadius: '24px',
+            overflow: 'hidden',
+            border: 'none',
+            position: 'relative',
+            zIndex: 1,
+            backgroundColor: '#ffffff',
+          }}
+        >
+          <div className="row g-0" style={{ minHeight: '550px' }}>
+            {/* Lado Esquerdo - Formulário */}
+            <div className="col-md-6 d-flex flex-column justify-content-center p-5" style={{ backgroundColor: '#ffffff' }}>
+              <div className="mb-4">
+                <h2 className="text-dark mb-2" style={{ fontSize: '2rem', fontWeight: '700' }}>
+                  Faça seu login.
+                </h2>
+              </div>
 
-          <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <FloatingLabel
-              controlId="floatingInput"
-              label="Usuário"
-              className="mb-3"
-            >
-              <Form.Control
-                required
-                type="text"
-                placeholder="nome@exemplo.com"
-              />
-            </FloatingLabel>
-            <FloatingLabel
-              controlId="floatingPassword"
-              label="Senha"
-              className="mb-3"
-            >
-              <Form.Control type="password" required placeholder="senha" />
-            </FloatingLabel>
-            <Stack className="col-sm-5 mx-auto">
-              <Button variant="success" type="submit" disabled={isSubmitting}>
+            {invalidCredentials && (
+              <Alert
+                variant="warning"
+                dismissible
+                onClose={() => setInvalidCredentials(false)}
+                className="mb-3"
+                style={{ backgroundColor: '#ffc107', border: 'none' }}
+              >
+                Credenciais inválidas.
+              </Alert>
+            )}
+
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label className="text-dark mb-2 d-block" style={{ fontSize: '0.9rem', fontWeight: '500' }}>
+                  Usuário
+                </label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="user"
+                  className="login-input-custom"
+                  placeholder="admin"
+                  style={{
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #2E8B57',
+                    borderRadius: '10px',
+                    color: '#212529',
+                    padding: '12px 15px',
+                  }}
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="text-dark mb-2 d-block" style={{ fontSize: '0.9rem', fontWeight: '500' }}>
+                  Senha
+                </label>
+                <Form.Control
+                  type="password"
+                  required
+                  className="login-input-custom"
+                  placeholder="••••••••"
+                  style={{
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #2E8B57',
+                    borderRadius: '10px',
+                    color: '#212529',
+                    padding: '12px 15px',
+                  }}
+                />
+              </div>
+
+              <div className="d-flex justify-content-end mb-4">
+                <a 
+                  href="#" 
+                  className="text-decoration-none"
+                  style={{ color: '#2E8B57', fontSize: '0.85rem' }}
+                  onClick={(e) => e.preventDefault()}
+                >
+                  Esqueci minha senha
+                </a>
+              </div>
+
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-100 mb-3"
+                style={{
+                  background: 'linear-gradient(90deg, #2E8B57 0%, #228B22 100%)',
+                  border: 'none',
+                  borderRadius: '10px',
+                  padding: '12px',
+                  fontWeight: '600',
+                  fontSize: '1rem',
+                  color: '#ffffff',
+                }}
+              >
                 {isSubmitting ? (
                   <>
                     <span
@@ -120,16 +179,54 @@ const Login = () => {
                       role="status"
                       aria-hidden="true"
                     ></span>
+                    Entrando...
                   </>
                 ) : (
                   "Entrar"
                 )}
               </Button>
-            </Stack>
-          </Form>
-        </Card.Body>
+
+              <div className="text-center">
+                <a 
+                  href="#" 
+                  className="text-decoration-none"
+                  style={{ color: '#2E8B57', fontSize: '0.9rem' }}
+                  onClick={(e) => e.preventDefault()}
+                >
+                  Ainda não tenho uma conta
+                </a>
+              </div>
+            </Form>
+          </div>
+
+          {/* Lado Direito - Imagem */}
+          <div 
+            className="col-md-6 d-none d-md-block"
+            style={{
+              backgroundImage: 'url(/img/Fundo_login.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              position: 'relative',
+              borderRadius: '0 24px 24px 0',
+            }}
+          >
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: 'rgba(46, 139, 87, 0.1)',
+                borderRadius: '0 24px 24px 0',
+              }}
+            />
+          </div>
+        </div>
       </Card>
     </Container>
+    </div>
   );
 };
 

@@ -163,6 +163,34 @@ p {
     font-size: 1.5rem;
 }
 
+/* Estilos do Login */
+.login-page-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.login-card-custom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(46, 139, 87, 0.15) !important;
+}
+
+.login-input-custom:focus {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border: 1px solid #228B22 !important;
+    box-shadow: 0 0 0 0.2rem rgba(46, 139, 87, 0.25) !important;
+    outline: none !important;
+}
+
+.login-input-custom::placeholder {
+    color: #6c757d !important;
+}
+
 .navbar .nav-link {
     font-weight: 500;
     padding: 0.5rem 1rem !important;
