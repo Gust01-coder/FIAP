@@ -116,4 +116,19 @@ npm run preview
 
 ---
 
+## 🎬 Roteiro para Vídeo Pitch
+
+Para apresentar o projeto em um vídeo pitch de 3 minutos, consulte o arquivo **[ROTEIRO_VIDEO_PITCH.md](./ROTEIRO_VIDEO_PITCH.md)** que contém:
+
+- ✅ Estrutura completa do roteiro (3 minutos)
+- ✅ Apresentação detalhada da empresa e dores
+- ✅ Demonstração de todas as funcionalidades
+- ✅ Tempo sugerido para cada segmento
+- ✅ Checklist de gravação
+- ✅ Dicas de produção
+
+O roteiro foi desenvolvido seguindo a sugestão de incluir uma apresentação mais detalhada da empresa e suas dores, para que o contexto geral fique mais claro antes de apresentar a solução.
+
+---
+
 **AgroTech** - Transformando a agricultura através da tecnologia 🚀
